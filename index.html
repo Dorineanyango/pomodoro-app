@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro App</h1>
+
+        <div class="timer-container">
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+
+        <div class="custom-time">
+            <label for="work-time">Work Time (minutes):</label>
+            <input type="number" id="work-time" value="25">
+            <label for="break-time">Break Time (minutes):</label>
+            <input type="number" id="break-time" value="5">
+            <button id="set-time">Set Time</button>
+        </div>
+
+        <ul id="task-list">
+            <li>
+                <input type="text" placeholder="New task...">
+                <button class="add-task">Add</button>
+            </li>
+        </ul>
+
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+        <!-- Audio Notification -->
+        <audio id="notification-sound" src="alert.wav"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
